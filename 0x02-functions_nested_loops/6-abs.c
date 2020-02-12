@@ -2,9 +2,9 @@
 
 /**
   * _abs - computes the absolute value of an integer.
-  * @int: integer number
+  * @n: integer number
   *
-  * Return: Absolute value of @int
+  * Return: Absolute value of @n
   */
 
 int _abs(int n)
