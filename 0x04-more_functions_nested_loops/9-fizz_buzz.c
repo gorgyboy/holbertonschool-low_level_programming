@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "holberton.h"
 
 /**
   * main - Write a program that prints the numbers from 1 to 100,
@@ -25,7 +24,8 @@ int main(void)
 		else
 			printf("%d", i);
 		if (i < 100)
-			_putchar(' ');
+			printf(" ");
 	}
-	_putchar('\n');
+	printf("\n");
+	return (0);
 }
