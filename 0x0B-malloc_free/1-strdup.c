@@ -10,30 +10,20 @@
  * Return: returns a pointer.
  */
 
-int slen(char *s)
-{
-	int i = 0;
-
-	for (; s[i] != '\0'; i++)
-		continue;
-	return (i);
-}
-
 char *_strdup(char *str)
 {
 	char *c;
-	int i, s;
+	int i, j;
 
 	if (str == NULL)
 		return (NULL);
-	s = slen(str);
-	if (s == 0)
-		return (NULL);
-	c = malloc(sizeof(*str) * s);
+	for (i = 0; str[i] != '\0'; i++)
+		continue;
+	i++;
+	c = malloc(sizeof(*str) * i);
 	if (c == NULL)
 		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
-		c[i] = str[i];
+	for (j = 0; j < i; j++)
+		c[j] = str[j];
 	return (c);
-	free(c);
 }
