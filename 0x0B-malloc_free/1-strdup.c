@@ -13,6 +13,7 @@
 int slen(char *s)
 {
 	int i = 0;
+
 	for (; s[i] != '\0'; i++)
 		continue;
 	return (i);
@@ -26,6 +27,8 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	s = slen(str);
+	if (s == 0)
+		return (NULL);
 	c = malloc(sizeof(*str) * s);
 	if (c == NULL)
 		return (NULL);
