@@ -3,7 +3,8 @@
 
 
 /**
- * _calloc - allocates memory for an array, using malloc and setting it to zero.
+ * _calloc - allocates memory for an array, using malloc and setting
+ * it to zero.
  * @nmemb: array size.
  * @size: memory size.
  *
