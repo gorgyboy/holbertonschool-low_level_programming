@@ -50,9 +50,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[i] = s1[i];
 
 	for (i = 0; i < l_s2; i++)
-		ptr[s_l1 + i] = s2[i];
+		ptr[l_s1 + i] = s2[i];
 
-	ptr[s_l1 + l_s2] = '\0';
+	ptr[sl_1 + l_s2] = '\0';
 
 	return (ptr);
 }
