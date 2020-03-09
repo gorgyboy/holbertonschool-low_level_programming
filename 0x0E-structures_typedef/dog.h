@@ -8,14 +8,12 @@
  * @owner: dog's human slave.
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-
-typedef struct dog dog_t;
+} dog_t;
 
 int _putchar(char c);
 
