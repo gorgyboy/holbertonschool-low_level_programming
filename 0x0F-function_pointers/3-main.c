@@ -11,9 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
-	/* char *op; */
-	op_t operation;
+	op_t op;
 
 	if (argc != 4)
 	{
@@ -21,24 +19,15 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-	/* op = argv[2]; */
-	if (sizeof(*argv[2] > 1))
+	op.f = get_op_func(argv[2]);
+
+	if (op.f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	operation.f = get_op_func(argv[2]);
-
-	if (operation.f == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	printf("%d\n", operation.f(num1, num2));
+	printf("%d\n", op.f(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
 }
