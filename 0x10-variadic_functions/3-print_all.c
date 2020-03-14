@@ -16,6 +16,7 @@ int p_string(va_list ap);
 void print_all(const char * const format, ...)
 {
 	int i, j;
+	char *separator;
 	va_list l_args;
 	p_fmt fmt[] = {
 		{"c", p_char},
@@ -25,6 +26,7 @@ void print_all(const char * const format, ...)
 	};
 
 	i = 0;
+	separator = "";
 	va_start(l_args, format);
 
 	while (format != NULL && format[i] != '\0')
@@ -34,9 +36,9 @@ void print_all(const char * const format, ...)
 			j++;
 		if (j < 4)
 		{
+			printf("%s", separator);
 			fmt[j].f(l_args);
-			if (format[i + 1] != '\0')
-				printf(", ");
+			separator = ", ";
 		}
 		i++;
 	}
