@@ -1,12 +1,15 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
+#include <stdarg.h>
+
 /**
- * struct op - Struct op
+ * struct print_format - Struct to print with the correct format
  * @fmt: The formatting operator
  * @f: The function associated
  */
-typedef struct print_format {
+typedef struct print_format
+{
 	char *fmt;
 	int (*f)(va_list);
 } p_fmt;

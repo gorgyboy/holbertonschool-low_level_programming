@@ -25,21 +25,21 @@ void print_all(const char * const format, ...)
 	};
 
 	i = 0;
-	j = 0;
 	va_start(l_args, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
+		j = 0;
 		while (j < 4 && *fmt[j].fmt != format[i])
 			j++;
-		if (*fmt[j].fmt == format[i] && format[i + 1] != '\0')
+		if (j < 4)
 		{
 			fmt[j].f(l_args);
-			printf(", ");
+			if (format[i + 1] != '\0')
+				printf(", ");
 		}
 		i++;
 	}
-
 	printf("\n");
 	va_end(l_args);
 }
@@ -97,7 +97,6 @@ int p_string(va_list ap)
 		printf("%p", ptr);
 		return (0);
 	}
-
 	printf("%s", ptr);
 	return (0);
 }
