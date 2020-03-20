@@ -2,24 +2,6 @@
 #include <stdio.h>
 
 /**
- * _strlen - Returns string size without '\0'
- * @str: String to measure
- *
- * Return: String size
- */
-size_t _strlen(char *str)
-{
-	size_t len;
-
-	len = 0;
-
-	while (str[len] != '\0')
-		len++;
-
-	return (len);
-}
-
-/**
  * print_list - Prints all the elements of a list_t list
  * @h: list to print
  *
