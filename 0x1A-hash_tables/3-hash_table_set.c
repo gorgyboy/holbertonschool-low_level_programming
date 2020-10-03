@@ -25,10 +25,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (temp && strcmp(key, temp->key))
 		temp = temp->next;
 
-	if (temp)
+	if (temp && strcmp(temp->value, value))
 	{
 		temp->value = (char *)value;
 		return (1);
+	}
+	else if (temp && !strcmp(temp->value, value))
+	{
+		return (0);
 	}
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
