@@ -12,9 +12,12 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int index, first;
 	hash_node_t *temp;
 
+	if (!ht)
+		return;
+
 	first = 1;
 	printf("{");
-	for (index = 0; ht && index < ht->size; index++)
+	for (index = 0; index < ht->size; index++)
 	{
 		temp = ht->array[index];
 		if (temp && !first && index < ht->size - 2)
