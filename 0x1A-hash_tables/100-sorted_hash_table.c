@@ -70,8 +70,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = node;
 		return (1);
 	}
-	node->next = ht->array[index];
 	shash_table_sorted_list_set(ht, node);
+	node->next = ht->array[index];
+	ht->array[index] = node;
 	return (1);
 }
 
