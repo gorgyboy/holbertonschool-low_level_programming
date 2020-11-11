@@ -1,8 +1,7 @@
 .PHONY = all
 
 CC = gcc
-
 SRC = main.c holberton.c
 
 all:
-	${CC} ${SRC} -o holberton
+	$(CC) $(SRC) -o holberton
