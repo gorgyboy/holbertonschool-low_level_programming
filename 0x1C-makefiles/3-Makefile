@@ -2,7 +2,7 @@ CC = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
-RM = "rm -f"
+RM = rm
 
 .PHONY = all clean oclean fclean re
 
@@ -10,13 +10,13 @@ all: $(OBJ) # builds the executable
 	$(CC) $(OBJ) -o $(NAME)
 
 clean: # deletes all Emacs and Vim temporary files along with the executable
-	$(RM) *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 oclean: # deletes the object files
-	$(RM) $(OBJ)
+	$(RM) -f $(OBJ)
 
 fclean: # deletes the Emacs temporary files, the executable, and the object files
-	$(RM) *~ $(OBJ) $(NAME)
+	$(RM) -f *~ $(OBJ) $(NAME)
 
 re: # forces recompilation of all source files
 	$(CC) $(OBJ) -o $(NAME)
