@@ -19,4 +19,4 @@ fclean: # deletes the Emacs temporary files, the executable, and the object file
 	$(RM) -f *~ $(OBJ) $(NAME)
 
 re: # forces recompilation of all source files
-	$(CC) $(OBJ) -o $(NAME)
+	$(RM) -f $(OBJ)
