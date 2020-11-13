@@ -6,7 +6,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean oclean fclean re
 
-all: $(OBJ) m.h # builds the executable
+all: m.h $(OBJ) # builds the executable
 	$(CC) $(OBJ) -o $(NAME)
 
 clean: # deletes all Emacs and Vim temporary files along with the executable
