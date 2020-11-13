@@ -10,10 +10,10 @@ all: $(OBJ) m.h # builds the executable
 	$(CC) $(OBJ) -o $(NAME)
 
 clean: # deletes all Emacs and Vim temporary files along with the executable
-	$(RM) -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean: # deletes the object files
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean # deletes the Emacs temporary files, the executable, and the object files
 
