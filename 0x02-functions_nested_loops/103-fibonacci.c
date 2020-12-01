@@ -8,18 +8,19 @@
  */
 int main(void)
 {
-	size_t i, first, second, temp, sum;
+	size_t first, second, temp, sum;
 
 	sum = 0;
 	first = 0;
 	second = 1;
-	for (i = 1; first <= 4000000 && second <= 4000000; i++)
+	/* 4613732 */
+	while (second <= 4000000)
 	{
-		if (i % 2 == 0 && first <= 4000000 && second <= 4000000)
-			sum += first + second;
 		temp = second;
 		second += first;
 		first = temp;
+		if (second % 2 == 0 && second <= 4000000)
+			sum += second;
 	}
 	printf("%lu\n", sum);
 	return (0);
