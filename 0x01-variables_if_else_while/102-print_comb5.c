@@ -12,6 +12,7 @@ int main(void)
 
 	t_i = 0;
 	t_j = 0;
+
 	for (i = 0; i < 10; i++)
 		for (j = 0; j < 10; j++)
 			for (k = i; k < 10; k++)
