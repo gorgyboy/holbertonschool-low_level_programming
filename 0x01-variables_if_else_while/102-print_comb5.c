@@ -10,8 +10,8 @@ int main(void)
 {
 	int i, j, k, l, t_i, t_j;
 
-	t_i = 0;
-	t_j = 0;
+	t_i = 1;
+	t_j = 1;
 
 	for (i = 0; i < 10; i++)
 		for (j = 0; j < 10; j++)
